@@ -1,0 +1,30 @@
+{
+  "name": "aws-bootstrap",
+  "version": "1.0.0",
+  "description": "Testing out the good parts of AWS",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn build && node ./node_modules/pm2/bin/pm2 start ./dist/server.js --name hello_aws --log ../logs/app.log",
+    "stop": "node ./node_modules/pm2/bin/pm2 stop hello_aws",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GideonShils/aws-bootstrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GideonShils/aws-bootstrap/issues"
+  },
+  "homepage": "https://github.com/GideonShils/aws-bootstrap#readme",
+  "devDependencies": {
+    "typescript": "^3.7.5",
+    "@types/node": "^13.1.8"
+  },
+  "dependencies": {
+    "pm2": "^4.2.2",
+    "yarn": "^1.21.1"
+  }
+}
