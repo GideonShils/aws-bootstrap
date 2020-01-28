@@ -2,7 +2,7 @@ import { hostname } from 'os';
 import * as http from 'http';
 
 
-const message = 'Hello World\n';
+const message = `Hello World from ${hostname()}\n`;
 const port = 8080;
 
 const server = http.createServer((req, res) => {
