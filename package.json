@@ -4,7 +4,7 @@
   "description": "Testing out the good parts of AWS",
   "main": "index.js",
   "scripts": {
-    "start": "yarn build && node ./node_modules/pm2/bin/pm2 start ./dist/server.js --name hello_aws --log ../logs/app.log",
+    "start": "node ./node_modules/pm2/bin/pm2 start ./dist/server.js --name hello_aws --log ../logs/app.log",
     "stop": "node ./node_modules/pm2/bin/pm2 stop hello_aws",
     "build": "tsc"
   },
