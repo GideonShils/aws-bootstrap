@@ -1,8 +1,8 @@
 import { hostname } from 'os';
 import * as http from 'http';
 
-
-const message = `Hello World from ${hostname()}\n`;
+const STACK_NAME = process.env.STACK_NAME || "Unknown Stack";
+const message = `Hello World from ${hostname()} in ${STACK_NAME}\n`;
 const port = 8080;
 
 const server = http.createServer((req, res) => {
